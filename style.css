@@ -111,9 +111,15 @@ main{
     padding-left: 7.5rem;
     padding-right: 7.5rem;
 
+    .main-top-wrapper{
+        display: flex;
+        
+    }
     .DOD{
+        min-width: 0;
         background-color: white;
         position: relative;
+        margin-bottom: 1rem;
         
         .DOD-go-right{
             position: absolute;
@@ -124,6 +130,7 @@ main{
             display: inline-block;
             border-radius: 0.2rem;
             box-shadow:-2px 2px 2px #808080;
+            border: none;
         }
 
         .DOD-top{
@@ -204,6 +211,10 @@ main{
             }
         }
     }
+}
+
+.DOD-ad > img{
+    height: calc(100% - 1rem);
 }
 
 
