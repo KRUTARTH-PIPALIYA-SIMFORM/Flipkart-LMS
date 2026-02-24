@@ -5,6 +5,12 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
 header{
     padding: 0 10rem;
     background-color: #2874F0;
@@ -52,6 +58,11 @@ header{
                 list-style: none;
                 gap: 1rem;
 
+                a{
+                    text-decoration: none;
+                    color: currentColor;
+                }
+                
                 .header-right-nav-list-item{
                     padding: 0.75rem 1rem;
                     color: white;
@@ -66,7 +77,35 @@ header{
     }
 }
 
+.global-nav{
+    padding: 1rem 15rem;
+    margin-bottom: 1rem;
+
+    .global-nav-list{
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        gap: 1rem;
+
+        a{
+            text-decoration: none;
+            color: currentColor;
+
+            figure{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img{
+                    height: 4rem;
+                    width: 4rem;
+                }
+            }
+        }
+    }
+}
+
 
 main{
     background-color: #F1F3F6;
+    flex-grow: 1;
 }
