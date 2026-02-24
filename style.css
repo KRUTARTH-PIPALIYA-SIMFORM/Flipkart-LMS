@@ -79,7 +79,6 @@ header{
 
 .global-nav{
     padding: 1rem 15rem;
-    margin-bottom: 1rem;
 
     .global-nav-list{
         display: flex;
@@ -108,4 +107,44 @@ header{
 main{
     background-color: #F1F3F6;
     flex-grow: 1;
+    padding-top: 1rem;
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+
+    .DOD{
+        background-color: white;
+        
+        
+        .DOD-top{
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #F1F3F6;
+
+            .DOD-top-left{
+                display: flex;
+                justify-content: space-between;
+                gap: 2rem;
+                align-items: center;
+
+                h2{
+                    font-weight: normal;
+                }
+
+                .DOD-top-timer{
+                    color: #808080;
+                }
+            }
+
+            .DOD-top-right{
+
+                button{
+                    background-color: #2874F0;
+                    border: none;
+                    color: white;
+                    padding: 0.5rem 1rem;
+                }
+            }
+        }
+    }
 }
