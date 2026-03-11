@@ -1,3 +1,10 @@
 .vscode/*
 .prettierrc
 .prettierignore
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
