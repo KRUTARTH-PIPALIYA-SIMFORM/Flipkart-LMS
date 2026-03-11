@@ -9,6 +9,7 @@
 
 body {
     height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
 }
@@ -20,7 +21,9 @@ header {
 
 .header-wrapper {
     margin: 0 auto;
+    height: 4rem;
     display: flex;
+    justify-content: space-around;
     align-items: center;
     max-width: 1200px;
     width: 100%;
@@ -48,7 +51,7 @@ header {
                 border: none;
                 width: 100%;
                 max-width: 35rem;
-                flex: 1 1 35rem;
+                /* flex: 1 1 35rem; */
             }
 
             input:focus {
@@ -101,7 +104,7 @@ header {
         width: 100%;
         margin: 0 auto;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         list-style: none;
         gap: 1rem;
         overflow-x: auto;
