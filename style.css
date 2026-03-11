@@ -1,5 +1,278 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:
+        "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #2874f0;
+    padding: 0% 2.5rem;
+}
+
+.header-wrapper {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+
+    #header-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex: 1 1 auto;
+
+        img {
+            height: 3rem;
+        }
+
+        #header-search {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem 1rem;
+            max-width: 35rem;
+            flex-grow: 1;
+
+            input {
+                border: none;
+                width: 100%;
+                max-width: 35rem;
+                flex: 1 1 35rem;
+            }
+
+            input:focus {
+                outline: none;
+            }
+
+            img {
+                height: 1rem;
+            }
+        }
+    }
+
+    #header-right {
+        #header-right-nav {
+            #header-right-nav-list {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                gap: 1rem;
+                padding: 0.75rem 1rem;
+
+                a {
+                    text-decoration: none;
+                    color: currentColor;
+                }
+
+                .header-right-nav-list-item {
+                    color: white;
+                }
+
+                .login {
+                    padding: 0.5rem 2rem;
+                    background-color: white;
+                    color: #2874f0;
+                }
+            }
+        }
+    }
+}
+
+.hamburger {
+    display: none;
+}
+
+.global-nav {
+    padding: 1rem 2.5rem;
+
+    .global-nav-list {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 1rem;
+        overflow-x: auto;
+
+        a {
+            text-decoration: none;
+            color: currentColor;
+
+            figure {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    height: 4rem;
+                    width: 4rem;
+                }
+            }
+        }
+    }
+}
+
+main {
+    overflow-y: auto;
+    background-color: #f1f3f6;
+    flex-grow: 1;
+    padding-top: 1rem;
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+
+    .main-top-wrapper {
+        display: flex;
+    }
+
+    .DOD {
+        min-width: 0;
+        background-color: white;
+        position: relative;
+        margin-bottom: 1rem;
+
+        .DOD-go-right {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            padding: 1rem 0rem;
+            background-color: white;
+            display: inline-block;
+            border-radius: 0.2rem;
+            box-shadow: -2px 2px 2px #808080;
+            border: none;
+        }
+
+        .DOD-top {
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #f1f3f6;
+
+            .DOD-top-left {
+                display: flex;
+                justify-content: space-between;
+                gap: 2rem;
+                align-items: center;
+
+                h2 {
+                    font-weight: normal;
+                }
+
+                .DOD-top-timer {
+                    color: #808080;
+                }
+            }
+
+            .DOD-top-right {
+                button {
+                    background-color: #2874f0;
+                    border: none;
+                    color: white;
+                    padding: 0.5rem 1rem;
+                }
+            }
+        }
+
+        .items-list {
+            list-style: none;
+            display: flex;
+            overflow-x: auto;
+
+            .item {
+                padding: 1rem;
+
+                a {
+                    text-decoration: none;
+                    color: currentColor;
+
+                    figure {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        img {
+                            height: 10rem;
+                            width: 10rem;
+                        }
+
+                        figcaption {
+                            text-align: center;
+
+                            h4 {
+                                font-weight: normal;
+                            }
+
+                            .item-discount {
+                                color: #87bb89;
+                                font-size: 0.8rem;
+                            }
+
+                            .description {
+                                color: #808080;
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.DOD-ad > img {
+    height: calc(100% - 1rem);
+}
+
+@media (max-width: 1010px) {
+    .main-top-wrapper {
+        /* align-items: center; */
+        flex-direction: column;
+        /* overflow: auto; */
+
+        .DOD {
+            order: 2;
+        }
+        .DOD-ad {
+            order: 1;
+            align-self: center;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    header {
+        .header-wrapper {
+            #header-right {
+                #header-right-nav {
+                    #header-right-nav-list {
+                        .header-right-nav-list-item {
+                            display: none;
+                        }
+                        .hamburger {
+                            display: block;
+                            img {
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        padding: 1rem 2.5rem 0 2.5rem;
+    }
 }
